@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roxy Pérez Portfolio | Mobile - Fullstack Developer</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Lora:wght@400;500;600&family=Fira+Code:wght@300;400;500&display=swap"
+        rel="stylesheet">
+    <link href='https://cdn.boxicons.com/fonts/basic/boxicons.min.css' rel='stylesheet'>
+    <link rel="icon" href="img/99-128.webp" type="image/webp">
+    <link rel="stylesheet" href="/src/style.css">
+    <script type="module" src="/src/scripts/email.js"></script>
+    <script src="/src/scripts/script.js" defer></script>
+
+</head>
+
+<body>
+    <header>
+        <nav>
+            <a href="#home" class="logo">
+                <img src="/img/99-128.webp" alt="Roxy Pérez Portfolio">
+                Roxy Pérez | Portfolio</a>
+            <ul class="nav-links">
+                <li><a href="#about" data-en="About" data-es="Acerca de">About</a></li>
+                <li><a href="#skills" data-en="Tech Skills" data-es="Habilidades Técnicas">Tech Skills</a></li>
+                <li><a href="#soft-skills" data-en="Soft Skills" data-es="Habilidades Blandas">Soft Skills</a></li>
+                <li><a href="#experience" data-en="Experience" data-es="Experiencia">Experience</a></li>
+                <li><a href="#projects" data-en="Projects" data-es="Proyectos">Projects</a></li>
+                <li><a href="#contact" data-en="Contact" data-es="Contacto">Contact</a></li>
+            </ul>
+            <div class="controls">
+                <button class="lang-toggle" onclick="toggleLanguage()"><b>ES</b></button>
+                <button class="theme-toggle" onclick="toggleTheme()"><i class='bx  bx-moon'></i></button>
+            </div>
+            <button class="hamburger" aria-label="Open menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </nav>
+    </header>
+
+    <main>
+        <section id="about" class="section">
+            <div class="container">
+                <div class="about-content">
+                    <div class="about-text">
+                        <h1 data-en="Fullstack | Mobile  Developer" data-es="Desarrolladora Fullstack | Móvil">Mobile |
+                            Fullstack Developer</h1>
+                        <p data-en="Passionate about creating innovative mobile applications and scalable web solutions. With expertise in both frontend and backend development, I bring ideas to life through clean code and intuitive user experiences, focusing on problem-solving and offering a fluid design."
+                            data-es="Apasionada de la programación, me encanta crear aplicaciones móviles innovadoras y soluciones web escalables. Con experiencia en desarrollo frontend y backend, doy vida a las ideas a través de código limpio y experiencias de usuario intuitivas, enfocándome en la resolución de problemas y ofrecer un diseño fluido.">
+                            Passionate about creating innovative mobile applications and scalable web solutions. With
+                            expertise in both frontend and backend development, I bring ideas to life through clean code
+                            and intuitive user experiences, focusing on problem-solving and offering a fluid design.
+                        </p>
+                        <a href="#" class="btn" data-en="Download CV" data-es="Descargar CV">Download CV</a>
+                    </div>
+
+                    <div class="photo-container">
+                        <div class="circle-frame">
+                            <div class="circle-border"></div>
+                            <div class="circle-inner">
+                                <img src="/img/profile2.png" class="profile-photo">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills" class="section">
+            <div class="container">
+                <h2 class="section-title" data-en="Tech Skills" data-es="Habilidades Técnicas">Tech Skills</h2>
+                <div class="skills-grid">
+                    <div class="skill-category">
+                        <h3 data-en="Frontend Development" data-es="Desarrollo Frontend">Frontend Development</h3>
+                        <div class="skill-item">
+                            <span>Livewire</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="90"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span>HTML</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="90"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span>CSS</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="80"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span>JavaScript</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="88"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill-category">
+                        <h3 data-en="Backend Development" data-es="Desarrollo Backend">Backend Development</h3>
+                        <div class="skill-item">
+                            <span>Laravel</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="85"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span>Oracle</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="82"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span>MySQL</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="82"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span>PostgreSQL</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="78"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span>Firebase</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="80"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span>Supabase</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="80"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill-category">
+                        <h3 data-en="Mobile Development" data-es="Desarrollo Móvil">Mobile Development</h3>
+                        <div class="skill-item">
+                            <span>iOS (Swift)</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="75"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span>Flutter</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="80"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill-category">
+                        <h3 data-en="DevOps" data-es="DevOps">DevOps</h3>
+                        <div class="skill-item">
+                            <span>Docker</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="80"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span>Git</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="80"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span>AWS</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="80"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill-category">
+                        <h3 data-en="Tools" data-es="Herramientas">Tools</h3>
+                        <div class="skill-item">
+                            <span>VSCode</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="80"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span>XCode</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="80"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span>Postman</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="80"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Soft Skills Section -->
+        <section id="soft-skills" class="section">
+            <div class="container">
+                <h2 class="section-title" data-en="Soft Skills" data-es="Habilidades Blandas">Soft Skills</h2>
+                <div class="soft-skills-grid">
+                    <div class="soft-skill-card">
+                        <div class="soft-skill-icon"><i class='bx  bx-handshake'></i> </div>
+                        <h3 data-en="Teamwork" data-es="Trabajo en equipo">Teamwork</h3>
+                        <p data-en="Collaborative and supportive in multidisciplinary teams."
+                            data-es="Colaborativa y solidaria en equipos multidisciplinarios.">
+                            Collaborative and supportive in multidisciplinary teams.
+                        </p>
+                    </div>
+                    <div class="soft-skill-card">
+                        <div class="soft-skill-icon"><i class='bx  bx-light-bulb-alt'></i></div>
+                        <h3 data-en="Creativity" data-es="Creatividad">Creativity</h3>
+                        <p data-en="Innovative approach to problem-solving and design."
+                            data-es="Enfoque innovador para la resolución de problemas y el diseño.">
+                            Innovative approach to problem-solving and design.
+                        </p>
+                    </div>
+                    <div class="soft-skill-card">
+                        <div class="soft-skill-icon"><i class='bx  bx-user-voice'></i></div>
+                        <h3 data-en="Communication" data-es="Comunicación">Communication</h3>
+                        <p data-en="Clear and effective communicator with clients and teams."
+                            data-es="Comunicadora clara y efectiva con clientes y equipos.">
+                            Clear and effective communicator with clients and teams.
+                        </p>
+                    </div>
+                    <div class="soft-skill-card">
+                        <div class="soft-skill-icon"><i class='bx  bx-hourglass'></i> </div>
+                        <h3 data-en="Time Management" data-es="Gestión del tiempo">Time Management</h3>
+                        <p data-en="Efficient in prioritizing tasks and meeting deadlines."
+                            data-es="Eficiente en priorizar tareas y cumplir plazos.">
+                            Efficient in prioritizing tasks and meeting deadlines.
+                        </p>
+                    </div>
+                    <div class="soft-skill-card">
+                        <div class="soft-skill-icon"><i class='bx  bx-repeat-alt-2'></i></div>
+                        <h3 data-en="Adaptability" data-es="Adaptabilidad">Adaptability</h3>
+                        <p data-en="Quick to learn and adapt to new technologies and environments."
+                            data-es="Aprendo y me adapto rápido a nuevas tecnologías y entornos.">
+                            Quick to learn and adapt to new technologies and environments.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="experience" class="section">
+            <div class="container">
+                <h2 class="section-title" data-en="Experience" data-es="Experiencia">Experience</h2>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <h3 data-en="Senior Mobile Developer" data-es="Desarrollador Móvil Senior">Senior Mobile
+                                Developer</h3>
+                            <h4 data-en="Tech Solutions Inc." data-es="Tech Solutions Inc.">Tech Solutions Inc.</h4>
+                            <p data-en="Led a team of 5 developers in creating cross-platform mobile applications using React Native and Flutter. Implemented CI/CD pipelines and improved app performance by 40%."
+                                data-es="Dirigí un equipo de 5 desarrolladores en la creación de aplicaciones móviles multiplataforma usando React Native y Flutter. Implementé pipelines CI/CD y mejoré el rendimiento de las aplicaciones en un 40%.">
+                                Led a team of 5 developers in creating cross-platform mobile applications using React
+                                Native and Flutter. Implemented CI/CD pipelines and improved app performance by 40%.
+                            </p>
+                        </div>
+                        <div class="timeline-date">2022 - Present</div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <h3 data-en="Fullstack Developer" data-es="Desarrollador Fullstack">Fullstack Developer</h3>
+                            <h4 data-en="Digital Innovations" data-es="Digital Innovations">Digital Innovations</h4>
+                            <p data-en="Developed and maintained web applications using React.js, Node.js, and PostgreSQL. Built RESTful APIs and integrated third-party services for e-commerce platforms."
+                                data-es="Desarrollé y mantuve aplicaciones web usando React.js, Node.js y PostgreSQL. Construí APIs RESTful e integré servicios de terceros para plataformas de comercio electrónico.">
+                                Developed and maintained web applications using React.js, Node.js, and PostgreSQL. Built
+                                RESTful APIs and integrated third-party services for e-commerce platforms.
+                            </p>
+                        </div>
+                        <div class="timeline-date">2020 - 2022</div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <h3 data-en="Frontend Developer" data-es="Desarrollador Frontend">Frontend Developer</h3>
+                            <h4 data-en="StartUp Labs" data-es="StartUp Labs">StartUp Labs</h4>
+                            <p data-en="Created responsive web interfaces and mobile-first designs. Collaborated with UX/UI designers to implement pixel-perfect designs and optimize user experience."
+                                data-es="Creé interfaces web responsivas y diseños mobile-first. Colaboré con diseñadores UX/UI para implementar diseños pixel-perfect y optimizar la experiencia de usuario.">
+                                Created responsive web interfaces and mobile-first designs. Collaborated with UX/UI
+                                designers to implement pixel-perfect designs and optimize user experience.
+                            </p>
+                        </div>
+                        <div class="timeline-date">2018 - 2020</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="section">
+            <div class="container">
+                <h2 class="section-title" data-en="Projects" data-es="Proyectos">Projects</h2>
+                <div class="projects-grid">
+                    <div class="project-card">
+                        <div class="project-image">📱</div>
+                        <div class="project-content">
+                            <h3 class="project-title" data-en="E-Commerce Mobile App" data-es="App Móvil de E-Commerce">
+                                E-Commerce Mobile App</h3>
+                            <p class="project-description"
+                                data-en="A full-featured mobile shopping application with real-time inventory, secure payments, and social features. Built with React Native and Node.js backend."
+                                data-es="Una aplicación móvil de compras con todas las funciones, con inventario en tiempo real, pagos seguros y características sociales. Construida con React Native y backend Node.js.">
+                                A full-featured mobile shopping application with real-time inventory, secure payments,
+                                and social features. Built with React Native and Node.js backend.
+                            </p>
+                            <div class="project-tags">
+                                <span class="tag">Flutter</span>
+                                <span class="tag">Node.js</span>
+                                <span class="tag">PostgreSQL</span>
+                                <span class="tag">REST API</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="#" data-en="View Project" data-es="Ver Proyecto">View Project</a>
+                                <a href="#" data-en="Source Code" data-es="Código Fuente">Source Code</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-card">
+                        <div class="project-image">🌐</div>
+                        <div class="project-content">
+                            <h3 class="project-title" data-en="Task Management Platform"
+                                data-es="Plataforma de Gestión de Tareas">Task Management Platform</h3>
+                            <p class="project-description"
+                                data-en="A collaborative project management tool with real-time updates, file sharing, and team communication features. Built with React.js and Socket.io."
+                                data-es="Una herramienta de gestión de proyectos colaborativa con actualizaciones en tiempo real, intercambio de archivos y características de comunicación en equipo. Construida con React.js y Socket.io.">
+                                A collaborative project management tool with real-time updates, file sharing, and team
+                                communication features. Built with React.js and Socket.io.
+                            </p>
+                            <div class="project-tags">
+                                <span class="tag">React.js</span>
+                                <span class="tag">Socket.io</span>
+                                <span class="tag">MongoDB</span>
+                                <span class="tag">Express.js</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="#" data-en="View Project" data-es="Ver Proyecto">View Project</a>
+                                <a href="#" data-en="Source Code" data-es="Código Fuente">Source Code</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-card">
+                        <div class="project-image">🎮</div>
+                        <div class="project-content">
+                            <h3 class="project-title" data-en="Fitness Tracking App"
+                                data-es="App de Seguimiento Fitness">Fitness Tracking App</h3>
+                            <p class="project-description"
+                                data-en="A comprehensive fitness application with workout tracking, nutrition logging, and social challenges. Features include GPS tracking and wearable device integration."
+                                data-es="Una aplicación de fitness integral con seguimiento de entrenamientos, registro de nutrición y desafíos sociales. Las características incluyen seguimiento GPS e integración de dispositivos wearables.">
+                                A comprehensive fitness application with workout tracking, nutrition logging, and social
+                                challenges. Features include GPS tracking and wearable device integration.
+                            </p>
+                            <div class="project-tags">
+                                <span class="tag">Flutter</span>
+                                <span class="tag">Firebase</span>
+                                <span class="tag">Google Maps API</span>
+                                <span class="tag">Health Kit</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="#" data-en="View Project" data-es="Ver Proyecto">View Project</a>
+                                <a href="#" data-en="Source Code" data-es="Código Fuente">Source Code</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="section">
+            <div class="container">
+                <h2 class="section-title" data-en="Contact" data-es="Contacto">Contact</h2>
+                <div class="contact-content">
+                    <div class="contact-form">
+                        <h3 data-en="Get In Touch" data-es="Ponte En Contacto">Get In Touch</h3>
+                        <form id="contact-form">
+                            <div class="form-group">
+                                <label data-en="Name" data-es="Nombre">Name</label>
+                                <input type="text" name="name" required>
+                            </div>
+                            <div class="form-group">
+                                <label data-en="Email" data-es="Correo Electrónico">Email</label>
+                                <input type="email" name="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label data-en="Message" data-es="Mensaje">Message</label>
+                                <textarea name="message" rows="5" required></textarea>
+                            </div>
+                            <button type="submit" class="btn" data-en="Send Message" data-es="Enviar Mensaje">Send
+                                Message</button>
+                        </form>
+
+                    </div>
+                    <div class="social-links">
+                        <div class="social-card">
+                            <div class="social-icon"><img src="img/linkedin.png" alt=""></div>
+                            <h4>LinkedIn</h4>
+                            <p data-en="Connect with me professionally" data-es="Conéctate conmigo profesionalmente">
+                                Connect with me professionally</p>
+                            <a href="https://www.linkedin.com/in/roxy-perez-polanco/" target="_blank"
+                                data-en="View Profile" data-es="Ver Perfil">View Profile</a>
+                        </div>
+                        <div class="social-card">
+                            <div class="social-icon"><img src="img/github.png" alt=""></div>
+                            <h4>GitHub</h4>
+                            <p data-en="Check out my code repositories" data-es="Revisa mis repositorios de código">
+                                Check out my code repositories</p>
+                            <a href="https://github.com/roxy-perez" target="_blank" data-en="View Projects"
+                                data-es="Ver Proyectos">View
+                                Projects</a>
+                        </div>
+                        <div class="social-card">
+                            <div class="social-icon"><img src="img/flickr.png" alt=""></div>
+                            <h4>Flickr</h4>
+                            <p data-en="See my photography work" data-es="Mira mi trabajo fotográfico">See my
+                                photography work</p>
+                            <a href="https://www.flickr.com/photos/rsujell/" target="_blank" data-en="View Photos"
+                                data-es="Ver Fotos">View Photos</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <footer class="footer">
+            <div>
+                <p data-en="&copy; Roxy Pérez. All rights reserved."
+                    data-es="&copy; Roxy Pérez. Todos los derechos reservados.">&copy; Roxy Pérez. All rights
+                    reserved.</p>
+                <p data-en="Designed with ❤️ by Roxy Pérez" data-es="Diseñado con ❤️ por Roxy Pérez.">Designed with ❤️
+                    by
+                    Roxy Pérez.</p>
+                <p>2025</p>
+            </div>
+        </footer>
+    </main>
+</body>
+
+</html>

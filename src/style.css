@@ -380,6 +380,7 @@ section.visible {
   object-fit: cover;
   transition: transform 0.3s ease;
   z-index: 3;
+  background-color: var(--background);
 }
 
 .circle-frame:hover .profile-photo {

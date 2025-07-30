@@ -4,11 +4,9 @@ document.addEventListener("DOMContentLoaded", () => {
   function toggleLanguage() {
     currentLanguage = currentLanguage === "en" ? "es" : "en";
 
-    // Actualiza el botón de idioma
     const langToggle = document.querySelector(".lang-toggle");
     langToggle.innerHTML = currentLanguage === "en" ? "<b>ES</b>" : "<b>EN</b>";
 
-    // Actualiza los elementos con atributos data-en y data-es
     const elements = document.querySelectorAll("[data-en][data-es]");
     elements.forEach((element) => {
       element.classList.add("lang-transition");
@@ -19,7 +17,6 @@ document.addEventListener("DOMContentLoaded", () => {
       }, 150);
     });
 
-    // Actualiza el atributo lang del documento
     document.documentElement.lang = currentLanguage;
   }
 
@@ -28,13 +25,11 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 document.addEventListener("DOMContentLoaded", () => {
-  // Inicialización del tema (por si el usuario ya tenía uno guardado)
   const savedTheme = localStorage.getItem("theme");
   if (savedTheme === "dark") {
     document.body.classList.add("dark");
   }
 
-  // Función para alternar el tema
   function toggleTheme() {
     const body = document.body;
     const themeToggle = document.querySelector(".theme-toggle");
@@ -55,7 +50,6 @@ document.addEventListener("DOMContentLoaded", () => {
   themeToggleBtn.addEventListener("click", toggleTheme);
 });
 
-// Load saved theme
 function loadTheme() {
   const savedTheme = localStorage.getItem("theme");
   if (savedTheme === "dark") {
@@ -64,7 +58,6 @@ function loadTheme() {
   }
 }
 
-// Scroll animations
 function handleScroll() {
   const sections = document.querySelectorAll(".section");
   const scrollPosition = window.scrollY + window.innerHeight;
@@ -79,7 +72,6 @@ function handleScroll() {
   });
 }
 
-// Animate skill bars
 function animateSkills() {
   const skillBars = document.querySelectorAll(".skill-progress");
   const observer = new IntersectionObserver((entries) => {
@@ -94,7 +86,6 @@ function animateSkills() {
   skillBars.forEach((bar) => observer.observe(bar));
 }
 
-// Smooth scrolling for navigation links
 function setupSmoothScrolling() {
   const navLinks = document.querySelectorAll('a[href^="#"]');
   navLinks.forEach((link) => {
@@ -116,13 +107,11 @@ function setupSmoothScrolling() {
   });
 }
 
-// Form submission
 function setupForm() {
   const form = document.querySelector("form");
   form.addEventListener("submit", (e) => {
     e.preventDefault();
 
-    // Get form data
     const formData = new FormData(form);
     const name =
       formData.get("name") ||
@@ -133,7 +122,6 @@ function setupForm() {
     const message =
       formData.get("message") || e.target.querySelector("textarea").value;
 
-    // Show success message
     const successMessage =
       currentLanguage === "en"
         ? "Thank you for your message! I'll get back to you soon."
@@ -141,30 +129,24 @@ function setupForm() {
 
     alert(successMessage);
 
-    // Reset form
     form.reset();
   });
 }
 
-// Initialize everything
 document.addEventListener("DOMContentLoaded", () => {
   loadTheme();
   setupSmoothScrolling();
   setupForm();
   animateSkills();
 
-  // Initial scroll check
   handleScroll();
 
-  // Add scroll event listener
   window.addEventListener("scroll", handleScroll);
 
-  // Add resize event listener for mobile responsiveness
   window.addEventListener("resize", () => {
     handleScroll();
   });
 
-  // Hamburger menu logic
   const hamburger = document.querySelector(".hamburger");
   const navLinks = document.querySelector(".nav-links");
 
@@ -173,7 +155,6 @@ document.addEventListener("DOMContentLoaded", () => {
     navLinks.classList.toggle("open");
   });
 
-  // Opcional: cerrar menú al hacer click en un link
   document.querySelectorAll(".nav-links a").forEach((link) => {
     link.addEventListener("click", () => {
       // Cerrar menú hamburger para pantallas medianas y pequeñas
@@ -184,7 +165,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  // Cerrar menú al cambiar tamaño de ventana
   window.addEventListener("resize", () => {
     if (window.innerWidth > 1100) {
       hamburger.classList.remove("active");
@@ -193,7 +173,6 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
-// Header background on scroll
 window.addEventListener("scroll", () => {
   const header = document.querySelector("header");
   if (window.scrollY > 100) {

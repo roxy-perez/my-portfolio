@@ -1,23 +1,6 @@
 // Language system
 let currentLanguage = "en";
 
-const translations = {
-  en: {
-    navAbout: "About",
-    navSkills: "Skills",
-    navExperience: "Experience",
-    navProjects: "Projects",
-    navContact: "Contact",
-  },
-  es: {
-    navAbout: "Acerca de",
-    navSkills: "Habilidades",
-    navExperience: "Experiencia",
-    navProjects: "Proyectos",
-    navContact: "Contacto",
-  },
-};
-
 function toggleLanguage() {
   currentLanguage = currentLanguage === "en" ? "es" : "en";
 
@@ -48,7 +31,7 @@ function toggleTheme() {
   body.classList.toggle("dark");
   themeToggle.innerHTML = body.classList.contains("dark")
     ? "<i class='bx bx-sun-bright'></i>"
-    : "<i class='bx  bx-moon' ></i>";
+    : "<i class='bx bx-moon'></i>";
 
   // Save theme preference
   localStorage.setItem(
@@ -178,11 +161,20 @@ document.addEventListener("DOMContentLoaded", () => {
   // Opcional: cerrar menú al hacer click en un link
   document.querySelectorAll(".nav-links a").forEach((link) => {
     link.addEventListener("click", () => {
-      if (window.innerWidth <= 900) {
+      // Cerrar menú hamburger para pantallas medianas y pequeñas
+      if (window.innerWidth <= 1100) {
         hamburger.classList.remove("active");
         navLinks.classList.remove("open");
       }
     });
+  });
+
+  // Cerrar menú al cambiar tamaño de ventana
+  window.addEventListener("resize", () => {
+    if (window.innerWidth > 1100) {
+      hamburger.classList.remove("active");
+      navLinks.classList.remove("open");
+    }
   });
 });
 

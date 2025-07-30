@@ -1,44 +1,59 @@
-// Language system
-let currentLanguage = "en";
+document.addEventListener("DOMContentLoaded", () => {
+  let currentLanguage = "en"; //
 
-function toggleLanguage() {
-  currentLanguage = currentLanguage === "en" ? "es" : "en";
+  function toggleLanguage() {
+    currentLanguage = currentLanguage === "en" ? "es" : "en";
 
-  // Update language toggle button
-  const langToggle = document.querySelector(".lang-toggle");
-  langToggle.innerHTML = currentLanguage === "en" ? "<b>ES</b>" : "<b>EN</b>";
+    // Actualiza el botón de idioma
+    const langToggle = document.querySelector(".lang-toggle");
+    langToggle.innerHTML = currentLanguage === "en" ? "<b>ES</b>" : "<b>EN</b>";
 
-  // Update all elements with data-en and data-es attributes
-  const elements = document.querySelectorAll("[data-en][data-es]");
-  elements.forEach((element) => {
-    element.classList.add("lang-transition");
-    setTimeout(() => {
-      element.textContent = element.getAttribute(`data-${currentLanguage}`);
-      element.classList.remove("lang-transition");
-      element.classList.add("visible");
-    }, 150);
-  });
+    // Actualiza los elementos con atributos data-en y data-es
+    const elements = document.querySelectorAll("[data-en][data-es]");
+    elements.forEach((element) => {
+      element.classList.add("lang-transition");
+      setTimeout(() => {
+        element.textContent = element.getAttribute(`data-${currentLanguage}`);
+        element.classList.remove("lang-transition");
+        element.classList.add("visible");
+      }, 150);
+    });
 
-  // Update document language
-  document.documentElement.lang = currentLanguage;
-}
+    // Actualiza el atributo lang del documento
+    document.documentElement.lang = currentLanguage;
+  }
 
-// Theme toggle
-function toggleTheme() {
-  const body = document.body;
-  const themeToggle = document.querySelector(".theme-toggle");
+  const langToggleBtn = document.querySelector(".lang-toggle");
+  langToggleBtn.addEventListener("click", toggleLanguage);
+});
 
-  body.classList.toggle("dark");
-  themeToggle.innerHTML = body.classList.contains("dark")
-    ? "<i class='bx bx-sun-bright'></i>"
-    : "<i class='bx bx-moon'></i>";
+document.addEventListener("DOMContentLoaded", () => {
+  // Inicialización del tema (por si el usuario ya tenía uno guardado)
+  const savedTheme = localStorage.getItem("theme");
+  if (savedTheme === "dark") {
+    document.body.classList.add("dark");
+  }
 
-  // Save theme preference
-  localStorage.setItem(
-    "theme",
-    body.classList.contains("dark") ? "dark" : "light"
-  );
-}
+  // Función para alternar el tema
+  function toggleTheme() {
+    const body = document.body;
+    const themeToggle = document.querySelector(".theme-toggle");
+
+    body.classList.toggle("dark");
+    themeToggle.innerHTML = body.classList.contains("dark")
+      ? "<i class='bx bx-sun-bright'></i>"
+      : "<i class='bx bx-moon'></i>";
+
+    // Guardar la preferencia
+    localStorage.setItem(
+      "theme",
+      body.classList.contains("dark") ? "dark" : "light"
+    );
+  }
+
+  const themeToggleBtn = document.querySelector(".theme-toggle");
+  themeToggleBtn.addEventListener("click", toggleTheme);
+});
 
 // Load saved theme
 function loadTheme() {

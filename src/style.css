@@ -118,13 +118,13 @@ html {
 /* Language transition */
 .lang-transition {
   opacity: 0;
-  transform: translateY(10px);
-  transition: all 0.3s ease;
+  transform: translateY(10px) scale(0.98);
+  transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
 .lang-transition.visible {
   opacity: 1;
-  transform: translateY(0);
+  transform: translateY(0) scale(1);
 }
 
 body {
@@ -133,6 +133,7 @@ body {
   color: var(--foreground);
   line-height: 1.6;
   overflow-x: hidden;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .container {
@@ -313,9 +314,15 @@ section.visible {
 }
 
 .btn:hover {
-  transform: translateY(-3px);
+  transform: scale(1.04) translateY(-2px);
   box-shadow: var(--shadow-lg);
   background-color: color-mix(in oklch, var(--primary) 60%, white 40%);
+  transition: all 0.2s ease-in-out;
+}
+
+.btn:active {
+  transform: scale(0.98) translateY(1px);
+  box-shadow: var(--shadow-sm);
 }
 
 /* Circle Photo Frame */
